@@ -2,7 +2,7 @@
 
 *Nature Communications*, 2026 · doi:10.1038/s41467-026-75265-5
 
-**17 slides · approx. 21 minutes.** The same text is in the speaker notes of each slide in the .pptx.
+**17 slides · approx. 22 minutes.** The same text is in the speaker notes of each slide in the .pptx.
 
 ## Before you present: pronunciation and plain meanings
 
@@ -35,7 +35,7 @@
 | 12 | Which moment predicts the choice? | ~1.25 min |
 | 13 | vmPFC: same brain pattern, no effect on choices | ~1.25 min |
 | 14 | Proposed mechanism and supporting evidence | ~1.25 min |
-| 15 | Limitations | ~1.25 min |
+| 15 | Strengths and weaknesses: how causal is this evidence? | ~2 min |
 | 16 | Take-home messages | ~1 min |
 | 17 | Thank you | ~0.25 min |
 
@@ -177,13 +177,17 @@ So the state before the offer doesn't vote for an answer directly. It changes ho
 
 Why believe this is specifically about the unpleasant part? Because it fits several independent findings, shown at the bottom. Electrically stimulating the insula changes how much people care about potential losses. People with insula damage struggle to learn from punishment but still learn from rewards. Insula activity tracks bad surprises more than good ones. More insula neurons respond to losses than to gains. And a similar study using a brain scanner, Chew and colleagues in 2019, found that spontaneous activity in a reward-related region also changed people's choices.
 
-## Slide 15: Limitations  _(~1.25 min)_
+## Slide 15: Strengths and weaknesses: how causal is this evidence?  _(~2 min)_
 
-Like any study, this one has limitations, and I've grouped them into two columns.
+Since this course is about causal approaches, let's ask how strong a causal claim this study can make.
 
-On the left are the limitations the authors themselves point out. They compared only high and low states, with no normal "middle" condition, so we can't tell whether the effect comes from up-states, down-states or both. Each patient only has a few electrodes, so only a small part of the brain is recorded. The slower theta rhythm behaved like gamma, which is unusual and suggests the effect may involve several rhythms. The authors say the cause-and-effect interpretation should be made carefully. And the absence of an effect in the vmPFC was unexpected.
+The strip at the top is a simple scale of causal evidence. At the bottom are correlational studies: record brain activity, then sort the trials afterwards and look for a relationship. At the top are interventions like brain stimulation or lesions, where the researcher directly changes the brain and watches what happens to behaviour. This study sits in the middle. It doesn't change the brain, but it controls when the offer arrives relative to the brain's natural state. That's a real step up from sorting afterwards, but it isn't an intervention.
 
-On the right are some further caveats. The sample is small, just seven insula sessions, and the main effect is only moderately significant, at p = 0.04. The title says activity "steers" decisions, but the system only waits for natural brain states. It doesn't create them, since there's no stimulation. That's stronger evidence than sorting trials afterwards, but it isn't direct proof of cause and effect. The trial-by-trial result relies on peak activity, and average activity in the same windows didn't predict choices. The choices are imaginary, with no real consequences. And the participants are epilepsy patients, so we're assuming the result carries over to healthy brains.
+The strengths are on the left. First, the timing is controlled in advance. Trials are assigned to up or down states before the choice happens, so there's no picking of convenient trials after the fact. Second, the comparison is fair. It's the same people and the same task, the conditions alternate, and difficulty and response times were matched, so those can't explain the difference. Third, the recordings come from inside the brain, which gives a precise, local measure of activity. Fourth, there are good controls: trials with epileptic spikes were removed, and the activity flip was absent in the pauses between trials. Fifth, the effect is specific to the insula and not the vmPFC. It also agrees with stimulation and lesion studies, so different methods point to the same conclusion.
+
+The weaknesses are on the right, and the first one is the most important for this course. The brain states are observed, not created. So a hidden third factor, like a momentary change in attention, arousal or mood, could raise insula activity and change the choice at the same time. Without stimulation, we can't rule that out. Second, there's no normal middle condition, so we don't know whether up-states, down-states or both drive the effect. Third, the proposed chain, where the pre-offer state leads to post-offer suppression which leads to the choice, is itself based on correlations within trials. The pre-offer activity didn't predict the choice trial by trial, and the result relied on peak rather than average activity. Fourth, the sample is small, seven insula sessions, with a moderate p-value of 0.04. Finally, the participants are epilepsy patients making imaginary choices, and the vmPFC "no effect" result is hard to interpret, because absence of evidence isn't evidence of absence.
+
+In short, this is stronger than correlational evidence but weaker than an intervention. The natural next step would be to stimulate the insula at the moments the system detects, which would turn this into a true causal test.
 
 ## Slide 16: Take-home messages  _(~1 min)_
 
