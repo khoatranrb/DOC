@@ -2,183 +2,201 @@
 
 *Nature Communications*, 2026 · doi:10.1038/s41467-026-75265-5
 
-**16 slides · approx. 21 minutes** (plus Q&A). The same text is in the speaker notes of each slide in the .pptx.
+**17 slides · approx. 21 minutes.** The same text is in the speaker notes of each slide in the .pptx.
+
+## Before you present: pronunciation and plain meanings
+
+| Term | Say it as | Plain meaning |
+|---|---|---|
+| Anterior insula (aIns) | "an-TEER-ee-er IN-syoo-luh" | Brain region tied to unpleasant things: losses, pain, bad mood |
+| vmPFC | "V-M-P-F-C" (ventromedial prefrontal cortex) | Brain region that computes how much we value things |
+| sEEG | "S-E-E-G" (stereo-electroencephalography) | Electrodes implanted inside the brain of epilepsy patients |
+| Broadband gamma activity (BGA) | "broadband GAM-uh" | Fast brain waves (70–150 Hz): a local "activity meter" |
+| Interictal | "in-ter-IK-tal" | Abnormal epileptic spikes between seizures |
+| Theta | "THAY-tuh" | A slower brain rhythm (4–8 Hz) |
+| MAD | "M-A-D" (median absolute deviation) | A robust measure of spread, like standard deviation |
+| β | "beta" | A regression coefficient (size and direction of an effect) |
+
+## Slide overview
 
 | # | Slide | Time |
 |---|---|---|
 | 1 | Title | ~0.75 min |
 | 2 | Why do we decide differently when facing the same offer? | ~1.5 min |
-| 3 | Key concepts | ~1.25 min |
-| 4 | The idea: let the brain decide when the offer appears | ~1.25 min |
-| 5 | Participants and tasks | ~1.5 min |
-| 6 | The closed-loop brain-computer interface | ~1.5 min |
-| 7 | Detecting up- and down-states; controlling difficulty | ~1.5 min |
-| 8 | Sanity check: choices are value-based | ~1 min |
-| 9 | Main result: aIns up-states make people accept more | ~1.5 min |
-| 10 | aIns dynamics: high before the offer, suppressed after | ~1.5 min |
-| 11 | Which moment predicts the choice? | ~1.25 min |
-| 12 | vmPFC: same neural dynamics, no behavioural effect | ~1.25 min |
-| 13 | Proposed mechanism and converging evidence | ~1.25 min |
-| 14 | Limitations and critical points | ~1.5 min |
-| 15 | Take-home messages | ~1 min |
-| 16 | Questions for discussion | ~1 min |
+| 3 | Recording from inside the brain | ~1.25 min |
+| 4 | Terms used in this talk | ~1.5 min |
+| 5 | The idea: let the brain decide when the offer appears | ~1.25 min |
+| 6 | Participants and tasks | ~1.5 min |
+| 7 | The closed-loop brain-computer interface | ~1.5 min |
+| 8 | Detecting up- and down-states; controlling difficulty | ~1.5 min |
+| 9 | Sanity check: choices follow the value of the offer | ~1 min |
+| 10 | Main result: insula up-states make people accept more | ~1.5 min |
+| 11 | Insula activity: high before the offer, suppressed after | ~1.5 min |
+| 12 | Which moment predicts the choice? | ~1.25 min |
+| 13 | vmPFC: same brain pattern, no effect on choices | ~1.25 min |
+| 14 | Proposed mechanism and supporting evidence | ~1.25 min |
+| 15 | Limitations | ~1.25 min |
+| 16 | Take-home messages | ~1 min |
+| 17 | Thank you | ~0.25 min |
 
 ---
 
 ## Slide 1: Title  _(~0.75 min)_
 
-Good [morning/afternoon], everyone. Today I'm presenting "Closed-loop readout of anterior insula high-gamma activity steers value-based decisions", by Clarissa Baratin, Mathias Pessiglione, Julien Bastin and colleagues from Grenoble and the Paris Brain Institute. It came out in Nature Communications in 2026.
+Hello everyone. Today I'll present a 2026 Nature Communications paper by Clarissa Baratin, Julien Bastin and colleagues from Grenoble and the Paris Brain Institute. The title is "Closed-loop readout of anterior insula high-gamma activity steers value-based decisions".
 
-The one-sentence summary: the authors built a brain-computer interface that watches activity inside patients' brains in real time and shows them a decision exactly when a specific brain region happens to be unusually active or unusually quiet. They find that the spontaneous state of the anterior insula at that moment changes what people choose.
+In plain words, the authors built a system that watches brain activity live and shows a person a decision at exactly the moment a particular brain region is unusually active, or unusually quiet. They then check whether that moment changes the person's answer.
 
-So the question running through this talk is: how much of our choice variability comes not from the options in front of us, but from whatever our brain happens to be doing when the options arrive?
+The short answer is yes, for one brain region. The brain's spontaneous state when an offer appears can tip the decision one way or the other.
 
 ## Slide 2: Why do we decide differently when facing the same offer?  _(~1.5 min)_
 
-Let's start with a basic puzzle. If I offer you exactly the same deal twice, you won't always give the same answer. Classical decision models treat that variability as noise around the "true" value of the options.
+Let's start with a simple observation. If you get exactly the same offer twice, you won't always give the same answer. Classic decision models treat that inconsistency as random noise.
 
-But there's a growing literature showing that spontaneous fluctuations in brain activity just before a stimulus arrives can bias what we perceive and what we choose. That's been shown for perceptual detection, for free choices, and even for economic decisions.
+But a growing body of research suggests part of this "noise" comes from the brain itself. Brain activity is never still. It constantly rises and falls on its own, even when nothing is happening. Several studies show that the level of activity just before an option appears can predict what a person will perceive or choose.
 
-For value-based decisions, two regions matter most here. The ventromedial prefrontal cortex, vmPFC, and the anterior insula, aIns. Earlier intracranial work from the same group, Cecchi et al. 2022, showed that high pre-stimulus broadband gamma in the vmPFC went with more risk-taking, as if gains were overweighted, especially in positive mood. High activity in the anterior insula went with greater sensitivity to losses, especially in negative mood. fMRI baseline activity in these regions tells a similar story.
+Two brain regions matter here. The first is the vmPFC, short for ventromedial prefrontal cortex, a region just behind the forehead that computes how much we value things. Earlier work found that when it was more active before a choice, people took more risks, as if they focused on possible gains. The second is the anterior insula, a region deep inside the side of the brain linked to unpleasant things like losses, pain and disgust. When it was more active, people were more sensitive to losses.
 
-The problem (the box on the right) is that all of this is correlational and post-hoc. You record, you sort trials afterwards, and you look for a relationship. You can't choose to present a decision when the brain is in a particular state, so you can't directly test whether that state matters. That's the gap this paper tackles.
+The problem, shown in the dark box, is that all of this evidence is correlational. Researchers recorded everything, then sorted the trials afterwards. Nobody could deliberately show an offer at the moment a region was in a particular state. So we couldn't be sure the brain state itself shapes the decision. This paper fills that gap.
 
-## Slide 3: Key concepts  _(~1.25 min)_
+## Slide 3: Recording from inside the brain  _(~1.25 min)_
 
-A few concepts before the methods.
+Before the method, here's where the data comes from, since it's unusual.
 
-First, the recordings. These are twelve patients with drug-resistant epilepsy who have depth electrodes implanted for clinical reasons, to localise where their seizures start. This is stereo-EEG, or sEEG. It gives direct recordings from deep structures like the insula with millisecond resolution, which you can't get from the scalp. The brain on the left shows every recording contact used: red for the anterior insula, green for the vmPFC.
+The participants are twelve patients with severe epilepsy that medication can't control. To plan surgery, doctors implant thin electrodes directly into their brains for a week or two to find where seizures start. This is called stereo-EEG, or sEEG. While the electrodes are in, patients can volunteer for research. That gives scientists a rare chance to record directly from deep brain regions with millisecond precision, which is impossible from outside the skull.
 
-Second, the signal. Broadband gamma activity, BGA, is the power between 70 and 150 Hz. It's a well-established proxy for local population spiking, and it correlates with the fMRI BOLD signal, so results can be compared with the imaging literature.
+The brain image shows every recording point used in the study: red dots in the anterior insula and green in the vmPFC.
 
-Third, the two regions. The vmPFC is the core valuation hub, encoding subjective value and linked to gains and positive mood. The anterior insula is more tied to aversive processing: losses, punishment prediction errors, negative mood. Keep in mind that in this framework the two regions are often thought of as opponents.
+The signal they track is called broadband gamma activity, or BGA. It's the fast part of the brain signal, between 70 and 150 cycles per second. You can think of it as a local activity meter: more BGA means more nearby neurons are firing. I'll say "gamma activity" or "activity" for short.
 
-## Slide 4: The idea: let the brain decide when the offer appears  _(~1.25 min)_
+The two regions are the vmPFC, the "how much do I want this" region, and the anterior insula, the "this is unpleasant" region.
 
-So here's the core idea. Instead of presenting trials at fixed times and sorting them afterwards, let the brain decide when each offer appears.
+## Slide 4: Terms used in this talk  _(~1.5 min)_
 
-The pipeline runs left to right. They stream the intracranial signal in real time, estimate broadband gamma every 30 milliseconds, and continuously compare it to an adaptive threshold. When the region crosses an "up" threshold, meaning unusually high activity, or a "down" threshold, unusually low activity, the offer is shown immediately. Then the participant decides to accept or reject.
+A few terms will come up repeatedly, so here they are in plain language. I'll go through them quickly.
 
-The task and the offers stay the same. The only thing that differs between conditions is the brain state at the moment the offer arrives. That's the neat part of the design.
+On the left are the task and method terms. A closed-loop brain-computer interface, or BCI, is software that reads brain signals live and reacts to them. Here it decides when to show the next offer, a bit like an event-driven trigger in code. An up-state or down-state is a short moment when activity is unusually high or low compared with the recent past. Decision value is simply the pleasant rating minus the unpleasant rating of an offer: the higher it is, the better the deal. The indifference point is the decision value where someone says yes half the time, so those are the hardest choices. A time-frequency map is a spectrogram-style heat map showing signal strength at each frequency over time. And interictal activity means abnormal epileptic spikes between seizures. They could fake an "up-state", so they're checked and removed.
 
-The hypothesis, from the prior work, was that the two regions would push behaviour in opposite directions. The intuitive prediction is that a vmPFC up-state should favour the pleasant side and so increase acceptance, while an aIns up-state should increase sensitivity to the unpleasant side and so decrease acceptance. Keep that aIns prediction in mind, because the result will be the opposite, and the explanation is one of the most interesting parts of the paper.
+On the right are the statistics terms. A mixed-effects regression is a regression over all trials from all people that lets each person have their own baseline. Logistic regression predicts the probability of a yes-or-no outcome, here accept versus reject. Beta is the fitted coefficient: its sign gives the direction of an effect and its size the strength. The p-value is roughly how likely we'd see an effect this big if there were really none, and below 0.05 is called significant. The z or t statistic is the effect divided by its uncertainty, and anything beyond about 2 is usually significant. Finally, median and MAD, or median absolute deviation, are robust versions of the mean and standard deviation that outliers don't skew.
 
-## Slide 5: Participants and tasks  _(~1.5 min)_
+## Slide 5: The idea: let the brain decide when the offer appears  _(~1.25 min)_
 
-Now the concrete design. Twelve patients, average age about 34, five women, all monitored at Grenoble University Hospital. Seven sessions were driven by the anterior insula and eight by the vmPFC. Patients with electrodes in both regions did one session for each.
+So here's the core idea. Instead of showing offers at fixed times and sorting trials afterwards, the brain decides when each offer appears.
 
-There were two tasks. First, an offline rating task. Participants rated 240 hypothetical scenarios, half pleasant, like "eating a piece of birthday cake", half unpleasant, like "stumbling in public", on a continuous scale of how much they'd like or dislike each one. That gives a personal subjective value for every item.
+The five steps run left to right. The system streams the electrode signal live, recomputes gamma activity every 30 milliseconds, and checks it against a threshold. When activity spikes unusually high, an up-state, or dips unusually low, a down-state, the offer appears on screen immediately. The person then accepts or rejects it.
 
-Second, the real-time accept/reject task. Each offer pairs one pleasant and one unpleasant item: "I would accept losing my house keys in exchange for going on holiday", yes or no. Note the fixation cross has no fixed duration. It stays up until the BCI detects the target brain state. Response time is unlimited.
+What I like about this design is that the task and the offers stay the same. The only thing that differs between the two conditions is the brain state at the moment the offer appears.
 
-The key variable is decision value, DV: the pleasant rating minus the unpleasant rating. And importantly, participants were not told that their brain activity controlled when trials appeared.
+The researchers expected the two regions to push decisions in opposite directions. Based on the earlier work, a vmPFC up-state should make the pleasant part of the offer feel more important, so people would accept more. An insula up-state should make the unpleasant part feel more important, so people would accept less. As we'll see, the insula result actually goes the other way.
 
-## Slide 6: The closed-loop brain-computer interface  _(~1.5 min)_
+## Slide 6: Participants and tasks  _(~1.5 min)_
 
-This is Figure 1a, the heart of the method. On the left, the signal comes off the clinical amplifier. The trace at the top shows real-time broadband gamma, in black, with the adaptive "up" threshold in red, the median in grey and the "down" threshold in blue. Each arrow marks a detection, and the trial sequence underneath shows how detections trigger trials: wait, trial 1 on an up-state, wait, trial 2 on a down-state, and so on. The offer then appears on screen and the patient answers with a gamepad.
+Now the concrete setup. There were twelve patients, average age about 34, five of them women. Seven sessions were driven by the insula and eight by the vmPFC. Patients with electrodes in both regions did one session for each.
 
-On the right is the technical pipeline. The Micromed clinical system samples at 512 Hz and streams over TCP/IP. BCI2000 reads the stream and writes it to a FieldTrip buffer, which MATLAB polls. The signal is re-referenced to a bipolar montage between neighbouring contacts, which cleans up distant, volume-conducted activity. Every 16 samples, about 30 ms, they take the last one second of data, apply a Hann window and an FFT, and sum the power from 70 to 150 Hz. That's averaged across bipoles, smoothed over 500 ms, and compared to the threshold. If the threshold is reached, the offer is shown. If nothing happens within 30 seconds, the offer is shown anyway.
+There were two tasks. The first was an offline rating task. Participants read 240 short imagined scenarios, half pleasant, like "eating a piece of birthday cake", and half unpleasant, like "stumbling in public". They rated how much they would like or dislike each one on a slider. That gives a personal score for every item.
 
-## Slide 7: Detecting up- and down-states; controlling difficulty  _(~1.5 min)_
+The second was the live accept-or-reject task. Each offer combines one pleasant and one unpleasant item. For example: "Would you accept losing your house keys in exchange for going on holiday?", yes or no. The scores from the first task tell us how good each deal is for that person. That's the decision value from the glossary.
 
-How do they decide what counts as an "up" or "down" state? Intracranial signals are non-stationary: their baseline drifts over a session. So a fixed threshold wouldn't work.
+Two details matter. First, the fixation cross before each offer has no fixed duration. It stays on screen until the system detects the target brain state. Second, participants were not told that their brain activity was controlling the timing.
 
-They use a robust moving-median algorithm. Over a sliding 20-second window, they compute the median of the gamma power and its median absolute deviation, or MAD. An up-state is a point more than 3.5 MADs above the median, and a down-state is more than 3.5 MADs below. They compute separate MADs above and below the median, the "double MAD", because the distribution isn't symmetric. Points that cross threshold count only 0.8 in later updates, so one big transient can't hijack the threshold. A nice practical benefit is that there's no calibration period. The thresholds adapt on the fly.
+## Slide 7: The closed-loop brain-computer interface  _(~1.5 min)_
 
-Then the trial design. Each session had 35 up-state and 35 down-state trials, strictly alternating, with a random first trial. Two sessions had 140 trials. To give the brain state the best chance to matter, at least 70% of offers were built to be hard, near each person's indifference point where acceptance is about 50%. A pilot with twelve healthy people showed the pleasant item needs to be rated about 15 points higher than the unpleasant one to reach that point. The intuition: when a choice is easy, the values dominate, and when it's a coin flip, internal state can tip the balance.
+This is Figure 1a, the heart of the method. On the left, the signal comes from the hospital's recording system. The trace at the top is the live gamma activity, in black. The red line is the "up" threshold, the grey dashed line is the running median, and the blue line is the "down" threshold. Each small arrow marks a detection. Underneath, you can see how detections trigger trials: wait, trial 1 on an up-state, wait, trial 2 on a down-state, and so on. The offer then appears on screen and the patient answers with a game controller.
 
-## Slide 8: Sanity check: choices are value-based  _(~1 min)_
+On the right is the data pipeline, which should feel familiar to anyone who has built a streaming system. The hospital amplifier samples at 512 Hz and streams over TCP/IP. An open-source tool called BCI2000 receives the stream and writes it into a buffer that MATLAB reads. Each electrode signal has its neighbour's signal subtracted, which removes noise coming from far away. Then every 30 milliseconds the code takes the last second of data, runs a Fast Fourier Transform, and adds up the power between 70 and 150 Hz. That gives the gamma activity value. It's averaged across channels, smoothed over half a second, and compared with the thresholds. If a threshold is crossed, the offer is shown. If nothing happens within 30 seconds, the offer is shown anyway, as a timeout.
 
-Before testing the brain-state effect, they check that behaviour looks like normal value-based decision-making. It does.
+## Slide 8: Detecting up- and down-states; controlling difficulty  _(~1.5 min)_
 
-On the left is Figure 1d: probability of accepting as a function of decision value. The black curve is the group fit and the grey curves are individual participants. A clean sigmoid: the more the pleasant item outweighs the unpleasant one, the more people accept. The slope estimate is 1.15, with a z of almost 17.
+How does the system decide what counts as "unusually high" or "unusually low"? Brain signals drift over a session, so a fixed threshold wouldn't work.
 
-Choices were slow, about 8 seconds on average, which fits a deliberative task where you have to imagine two scenarios. And harder choices took longer, as you'd expect.
+They use a rolling outlier detector, similar to anomaly detection on streaming data. Over a sliding 20-second window, they compute the median of the activity and its spread using MAD, which is a robust version of standard deviation. A point more than 3.5 times that spread above the median is an up-state. A point that far below is a down-state. The spread is computed separately above and below the median, because brain activity isn't symmetric. Detected spikes only get a weight of 0.8 when the statistics are updated, so one big spike can't throw off the threshold. The practical benefit is that there's no calibration phase: the thresholds adapt on their own.
 
-The most important point for what follows is on the right. Up-state and down-state trials didn't differ in decision value or in choice time. So any behavioural difference between states can't be explained by one condition simply having easier or harder offers.
+Now the trial design. Each session had 35 up-state and 35 down-state trials, strictly alternating. At least 70% of offers were designed to be hard, meaning close to each person's 50/50 point. A pilot study with healthy volunteers found that the pleasant item needs to score about 15 points higher than the unpleasant one for people to say yes half the time. The reasoning is that when a choice is obvious, the brain state won't change it. When it's a coin flip, a small internal nudge can tip the balance.
 
-## Slide 9: Main result: aIns up-states make people accept more  _(~1.5 min)_
+## Slide 9: Sanity check: choices follow the value of the offer  _(~1 min)_
 
-Here is the main result. In sessions driven by the anterior insula, offers presented during up-states were accepted more often than offers presented during down-states.
+Before looking at the brain effect, the authors check that people behaved sensibly, and they did.
 
-On the left, Figure 2b: acceptance rate for up versus down trials. Each line is a participant, and most of them slope downward from up to down. In a mixed-effects logistic regression that controls for decision value and inter-trial interval, the up-state effect is beta 0.44, p = 0.04.
+On the left is Figure 1d. The horizontal axis is decision value, meaning how good the deal is, and the vertical axis is the probability of saying yes. The black curve is the average fit and the grey curves are individual people. It's a clean S-shaped curve: the better the deal, the more likely people accept. The statistics are very strong, with a z of about 17.
 
-One obvious worry with epilepsy patients is that pathological activity, like interictal spikes or high-frequency oscillations, could be triggering the "up-states". So they detected those events automatically, checked them by eye, and removed the affected trials. The effect held, and actually got a bit stronger: beta 0.47, p = 0.014.
+People took about 8 seconds per choice, which makes sense since they have to imagine two scenarios. And harder choices took a bit longer.
 
-Now remember the prediction. Given the insula's link to losses, you'd expect high insula activity to make people more averse to the unpleasant component and to accept less. They found the opposite. The next two slides explain why.
+The most important point is in the green box. Up-state and down-state trials had the same difficulty and the same response times. So if we see a difference in choices between the two states, it can't be because one condition simply had easier offers.
 
-## Slide 10: aIns dynamics: high before the offer, suppressed after  _(~1.5 min)_
+## Slide 10: Main result: insula up-states make people accept more  _(~1.5 min)_
 
-The authors then looked at what happens in the insula after the offer appears, even though the trials were only classified by activity at offer onset.
+Here's the main result. When the insula drove the system, offers shown during up-states were accepted more often than offers shown during down-states.
 
-Left panel, Figure 2c: the time-frequency contrast, up minus down. Warm colours before time zero are expected, since that's how the trials were selected. After onset, a cooler, bluish pattern appears in the high frequencies.
+On the left is Figure 2b, the acceptance rate for up versus down trials. Each line is one participant, and most lines slope downwards from up to down. The regression, which accounts for how good each deal was and the time between trials, gives a positive effect: beta 0.44, p = 0.04. So the effect is statistically significant.
 
-The middle panel, 2d, makes it clearer. The red line is up-state trials and the blue line is down-state trials. Red peaks at offer onset by construction, then drops below baseline and stays suppressed through the shaded 2.5 to 4.5 second window. Blue does the reverse: it rises after the offer. So there's a crossover, where high before means low after, and low before means high after.
+These are epilepsy patients, so there's an obvious concern: abnormal epileptic spikes could look like "up-states" to the system. The authors detected those events, checked them by hand, and removed the affected trials. The effect held and even got slightly stronger: beta 0.47, p = 0.014.
 
-The right panel, 2e, quantifies it per participant: the up minus down difference is positive before the offer and negative after it, in every participant. Statistically, the state-by-time-window interaction is huge: t about 9.5, p around 10 to the minus 20.
+Now recall the expectation. Since the insula is the "unpleasant" region, you'd expect high insula activity to make people accept less. The result is the opposite. The next two slides explain why.
 
-A key control: this reversal doesn't happen during inter-trial intervals. When there's no offer, up-state events stay higher than down-state events in both windows. So the reversal isn't just regression to the mean. It depends on engaging with the task. It's consistent with known anti-correlations between spontaneous and stimulus-evoked activity.
+## Slide 11: Insula activity: high before the offer, suppressed after  _(~1.5 min)_
 
-## Slide 11: Which moment predicts the choice?  _(~1.25 min)_
+To understand the surprise, the authors looked at what the insula did after the offer appeared.
 
-So we have two candidate signals: activity before the offer and activity after it. Which one actually relates to the choice, trial by trial?
+The left panel, Figure 2c, is a spectrogram-style map showing up-state trials minus down-state trials. Red means more power in up-state trials and blue means less. Before time zero it's red, as expected, since that's how the trials were selected. After the offer, blue patches appear at the higher frequencies.
 
-They ran logistic mixed models with choice as the outcome and gamma peak amplitude in one of three windows as the predictor, controlling for decision value.
+The middle panel, 2d, makes it clearer. The red line is up-state trials and the blue line is down-state trials. The red line peaks when the offer appears, by design, then drops below baseline and stays low during the grey window, about 2.5 to 4.5 seconds after the offer. The blue line does the opposite and rises. So the lines cross: high before means low after, and low before means high after.
 
-The pre-offer peak, which is the thing the BCI used, did not predict choice on a trial-by-trial basis: p = 0.20. Activity in the last second before the response didn't either: p = 0.11. But the post-offer peak did: beta negative, p = 0.03. The lower the insula activity after the offer, the more likely people were to accept.
+The right panel, 2e, shows the gap between up and down for each participant. It's positive before the offer and negative after, for every single person. The statistics are extremely strong, with a p-value around 10 to the minus 20.
 
-There's no interaction with decision value, so the effect is similar across the range of difficulties tested. In an exploratory analysis, the theta band, 4 to 8 Hz, showed a similar pattern.
+One important check: this flip doesn't happen during the pauses between trials. Without an offer, high moments stay higher than low moments. That means the flip isn't just a statistical artefact where extreme values naturally drift back to average. It happens because the person is processing an offer.
 
-Putting it together: high pre-offer activity leads to post-offer suppression, and that suppression is what biases people towards accepting the unpleasant item in exchange for the pleasant one. The pre-stimulus state seems to act indirectly, through how the region responds to the offer.
+## Slide 12: Which moment predicts the choice?  _(~1.25 min)_
 
-## Slide 12: vmPFC: same neural dynamics, no behavioural effect  _(~1.25 min)_
+So there are two candidate signals: activity before the offer and activity after it. Which one actually relates to the yes-or-no answer, trial by trial?
 
-Now the second region, the vmPFC. In sessions driven by vmPFC activity, up versus down states did not change choices: beta essentially zero, p = 0.89. On the left, Figure 2f, the individual lines go in both directions. Some participants accepted more in up-states, others less.
+For each trial, the authors took the peak activity in one of three time windows and asked whether it predicts the answer, after accounting for how good the deal was.
 
-You might think the BCI just failed to capture meaningful vmPFC states. But it didn't. The middle panel, 2h, shows the same pre-to-post reversal we saw in the insula: up-state trials drop well below baseline after the offer, and down-state trials go up. The interaction is just as strong, p around 10 to the minus 18, and consistent across participants, as panel 2i on the right shows.
+Activity before the offer, which is what the system used to trigger trials, did not predict the answer on a trial-by-trial basis: p = 0.20, not significant. Activity in the last second before the button press didn't either. But activity after the offer did, shown by the red card: p = 0.03. The lower the insula activity after the offer, the more likely people were to say yes.
 
-But unlike the insula, post-offer vmPFC activity did not predict choice. And when they directly compared the two regions, the up-down effect on acceptance was significantly different between aIns and vmPFC.
+This held for easy and hard offers alike. A slower brain rhythm, called theta, showed a similar pattern.
 
-So the message is anatomical specificity. Both regions show structured, state-dependent dynamics, but only the insula's fluctuations translate into a behavioural bias in this task. The authors are careful here, and so should we be: the vmPFC effect was very variable across people, so this null result shouldn't be over-interpreted as a true functional dissociation.
+So the story is this. A high state before the offer leads to lower activity after it, and that lower activity is what nudges people towards accepting. The state before the offer doesn't act directly. It changes how the insula reacts to the offer.
 
-## Slide 13: Proposed mechanism and converging evidence  _(~1.25 min)_
+## Slide 13: vmPFC: same brain pattern, no effect on choices  _(~1.25 min)_
 
-Here's the proposed mechanism as a causal chain. Spontaneously high insula activity just before the offer leads to a suppressed insula response to that offer. That fits a known principle: spontaneous and evoked activity tend to be anti-correlated. Less insula response means less weight on the aversive part of the offer, like losing your keys. And less weight on the aversive part means you're more likely to accept.
+Now the second region, the vmPFC. When the vmPFC drove the system, up versus down states made no difference to choices: p = 0.89. In the left panel, the participants' lines go both ways. Some accepted more in up-states and some accepted less.
 
-So the pre-stimulus state doesn't directly "vote" for an option. It changes how the region processes what comes next.
+You might think the system simply failed to capture anything meaningful in the vmPFC. But the middle and right panels show the same flip we saw in the insula: high before the offer, low after, and vice versa. It's just as strong statistically and consistent across participants.
 
-Why believe this is about aversive weighting specifically? Because it fits several independent lines of evidence, shown at the bottom. Electrical stimulation of the insula changes how much potential losses matter in risky choice. Insula lesions impair learning from punishment but spare reward learning. Insular gamma tracks punishment prediction errors more than reward ones. Pre-stimulus insula gamma tracks negative mood but not positive mood. And more single insula neurons encode losses than gains. There's also a nice parallel with a real-time fMRI study of the dopaminergic midbrain, Chew et al. 2019, where endogenous fluctuations also drove choice variability.
+The difference is that, unlike in the insula, vmPFC activity after the offer did not predict the answer. And when the authors compared the two regions directly, the effect on choices was significantly different.
 
-## Slide 14: Limitations and critical points  _(~1.5 min)_
+So the conclusion is that the effect is specific to one region. Both regions show the same activity pattern, but only the insula's pattern changes decisions in this task. The authors are careful to note that vmPFC results varied a lot between people, so this "no effect" result should be treated with caution.
 
-Every study has limits, and I've split them into two groups.
+## Slide 14: Proposed mechanism and supporting evidence  _(~1.25 min)_
 
-On the left are the limitations the authors acknowledge. There was no intermediate or control condition, only up versus down, so we can't tell whether up-states increase acceptance, down-states decrease it, or both. Spatial sampling is limited to a few contacts per patient. Theta behaved like gamma, which is a bit unexpected since theta is usually anti-correlated with gamma and BOLD, so the effect may reflect a broader modulation across frequencies. The authors themselves say the causal interpretation should be cautious. And the vmPFC null is surprising given the literature.
+Here's the proposed explanation as a chain of four steps.
 
-On the right are points I think are worth discussing. First, sample size. There are seven insula sessions, and the main effect is p = 0.04, which is modest and needs replication. Second, "steers" in the title is strong. The closed-loop design samples naturally occurring states. It doesn't create them, since there's no stimulation. That's better than post-hoc sorting because timing is controlled, but it's still not an intervention. Third, the trial-by-trial effect depends on a peak-based measure. The authors report that mean gamma in the same windows didn't predict choice. Fourth, the choices are hypothetical, with no real outcomes. And finally, these are epilepsy patients, so generalisation to healthy brains is an assumption, although the pathological-activity control helps.
+First, the insula happens to be in a high state just before the offer. Second, because of that, its response to the offer is weaker. It's known that when spontaneous activity is high, the brain's response to a new stimulus tends to be smaller, a bit like a system that is already busy responding less to a new request. Third, a weaker insula response means the unpleasant part of the offer, like losing your keys, carries less weight. Fourth, the person is more likely to accept.
 
-## Slide 15: Take-home messages  _(~1 min)_
+So the state before the offer doesn't vote for an answer directly. It changes how the insula processes what comes next.
 
-To wrap up, three take-home messages.
+Why believe this is specifically about the unpleasant part? Because it fits several independent findings, shown at the bottom. Electrically stimulating the insula changes how much people care about potential losses. People with insula damage struggle to learn from punishment but still learn from rewards. Insula activity tracks bad surprises more than good ones. More insula neurons respond to losses than to gains. And a similar study using a brain scanner, Chew and colleagues in 2019, found that spontaneous activity in a reward-related region also changed people's choices.
 
-One, methodological. A closed-loop intracranial BCI can present decisions at chosen moments of spontaneous brain activity, with adaptive thresholds and no calibration. That turns a correlational question into a controlled comparison where the task stays constant and only the brain state changes.
+## Slide 15: Limitations  _(~1.25 min)_
 
-Two, the finding. For hard choices, spontaneous up-states in the anterior insula make people more likely to accept offers that mix pleasant and unpleasant outcomes, apparently because they're followed by a suppressed insula response, which reduces the weight of the aversive part.
+Like any study, this one has limitations, and I've grouped them into two columns.
 
-Three, the broader point. Choice variability isn't just noise. Part of it comes from intrinsic brain states, and neuro-computational models of decision-making will need to take that into account.
+On the left are the limitations the authors themselves point out. They compared only high and low states, with no normal "middle" condition, so we can't tell whether the effect comes from up-states, down-states or both. Each patient only has a few electrodes, so only a small part of the brain is recorded. The slower theta rhythm behaved like gamma, which is unusual and suggests the effect may involve several rhythms. The authors say the cause-and-effect interpretation should be made carefully. And the absence of an effect in the vmPFC was unexpected.
 
-Looking ahead, the authors suggest this could matter in disorders where decision-making goes wrong, such as OCD, addiction or depression, and could eventually inform closed-loop neuromodulation that intervenes at the right moment.
+On the right are some further caveats. The sample is small, just seven insula sessions, and the main effect is only moderately significant, at p = 0.04. The title says activity "steers" decisions, but the system only waits for natural brain states. It doesn't create them, since there's no stimulation. That's stronger evidence than sorting trials afterwards, but it isn't direct proof of cause and effect. The trial-by-trial result relies on peak activity, and average activity in the same windows didn't predict choices. The choices are imaginary, with no real consequences. And the participants are epilepsy patients, so we're assuming the result carries over to healthy brains.
 
-## Slide 16: Questions for discussion  _(~1 min)_
+## Slide 16: Take-home messages  _(~1 min)_
 
-Thank you for your attention. I'll leave a few questions to start the discussion.
+To wrap up, here are three take-home messages.
 
-First: is sampling spontaneous states enough to claim that activity "steers" decisions, or do we need stimulation, for example triggering insula stimulation at detected states?
+First, the method. A closed-loop system can read brain activity live and time each decision to a spontaneous brain state. That turns a correlation question into a controlled comparison: same task, different brain state.
 
-Second: why would the vmPFC show the same neural reversal but no behavioural effect? Is it the task, which uses hypothetical scenarios rather than money? The sample size? Or the way value is represented there?
+Second, the finding. For hard choices, a spontaneously active insula just before an offer leads to a weaker insula reaction to it, which makes people more willing to accept a deal that mixes something pleasant with something unpleasant.
 
-Third: if the pre-offer state acts through the post-offer response, can we model it formally, for example as a shift in the weight on losses, or in the starting point of a drift-diffusion process?
+Third, the bigger picture. The inconsistency in our choices isn't just random noise. Part of it comes from the brain's own moment-to-moment state, and models of decision-making should account for that.
 
-And finally, could state-aware timing be used practically, for example to reduce maladaptive choices in addiction or depression?
+Looking ahead, the authors suggest this could help in conditions where decision-making goes wrong, like addiction, depression or OCD. It could eventually lead to treatments that intervene at exactly the right moment.
 
-I'm happy to take any questions.
+## Slide 17: Thank you  _(~0.25 min)_
+
+That concludes my presentation. Thank you for your attention.
